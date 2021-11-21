@@ -81,7 +81,7 @@ function init(){
     return inquirer
     .prompt(questions)
     .then(answers => {
-        writeFile('.README', generate_markdown(answers))
+        writeFile('./README.md', generate_markdown(answers))
     })
     .catch(error => {
         if(error.isTtyError) {
